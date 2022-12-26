@@ -14,7 +14,7 @@ const mult = function (a: number, b: number): number {
 const addThree = (a: number, b: number, c?: number): number =>
   c ? a + b + c : a + b;
 
-//Required parameter, if c not specified we use 10
+//Required parameter, if c not specified we use 10, it needs to be the LAST parameter!
 const addRequired = (a: number, b: number, c: number = 10): number => a + b + c;
 
 console.log(add(1, 2));

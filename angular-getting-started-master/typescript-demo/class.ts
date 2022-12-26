@@ -1,4 +1,4 @@
-class Employee {
+/* class Employee {
   //properties
   #id: number; // # tells that the property is private
   protected name: string; // used for extending classes
@@ -60,3 +60,4 @@ console.log(nameAddress2);
 
 John.empId = 100;
 console.log(John.empId);
+ */
