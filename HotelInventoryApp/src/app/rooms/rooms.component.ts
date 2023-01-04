@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
   hotelName: string = 'Hilton Hotel';
-  numberOfRooms: any = 10;
+  addressNumber: number = 867;
+  numberOfRooms: any = '10 single + 20 suites';
   hideRooms = true;
 
   constructor() {}

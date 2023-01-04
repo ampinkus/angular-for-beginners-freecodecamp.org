@@ -1,8 +1,11 @@
+<!-- Text interpolation -->
 <h1>Welcome to {{ hotelName }}</h1>
-<!-- Property interpolation, needs to be a string -->
+<h3>We are on the {{ addressNumber }} of Elm Street</h3>
+
+<!-- If hidden true the div is not shown -->
 <div [hidden]="hideRooms">
-  Number of Rooms:
-  <div [innerText]="numberOfRooms"></div>
+  <!-- Property binding, we use the HTML innerText attribute -->
+  Number of Rooms: <span [innerText]="numberOfRooms"></span>
 </div>
 
 <button (click)="toggle()">Toggle</button>
