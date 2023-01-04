@@ -6,6 +6,12 @@
 <div [hidden]="hideRooms">
   <!-- Property binding, we use the HTML innerText attribute -->
   Number of Rooms: <span [innerText]="numberOfRooms"></span>
+  <p>Age of the hotel: <span [innerText]="hotelObject.Age"></span></p>
 </div>
+
+<!-- We render the room list if they are available rooms -->
+<div *ngIf="rooms.availableRooms > 0">Rooms list:</div>
+<!-- other way to write the above sentence -->
+<div *ngIf="rooms?.availableRooms">Rooms list:</div>
 
 <button (click)="toggle()">Toggle</button>
