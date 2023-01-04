@@ -27,6 +27,7 @@ export class RoomsComponent implements OnInit {
   //create a list of different rooms
   roomList: RoomList[] = [
     {
+      roomNumber: 100,
       roomType: 'Deluxe room',
       amenities: 'Air Conditioner, WiFi, Tv, bathroom, kitchen',
       price: 500,
@@ -36,6 +37,7 @@ export class RoomsComponent implements OnInit {
       checkoutTime: new Date('12-jan-2023'),
     },
     {
+      roomNumber: 200,
       roomType: 'Standard room',
       amenities: 'Air Conditioner, Tv, bathroom',
       price: 300,
@@ -45,6 +47,7 @@ export class RoomsComponent implements OnInit {
       checkoutTime: new Date('23-jan-2023'),
     },
     {
+      roomNumber: 300,
       roomType: 'Private Suite',
       amenities: 'Air Conditioner, WiFi, Tv, bathroom, kitchen, living room',
       price: 800,
