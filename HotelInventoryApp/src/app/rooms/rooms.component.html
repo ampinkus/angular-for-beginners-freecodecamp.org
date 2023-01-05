@@ -5,14 +5,21 @@
 <!-- If hidden true the div is not shown -->
 <div [hidden]="hideRooms">
   <!-- Property binding, we use the HTML innerText attribute -->
-  Number of Rooms: <span [innerText]="numberOfRooms"></span>
+  Number of Rooms:
+  <!-- the color of the inner text depends if they are available rooms -->
+  <!-- if available then in green if not in red -->
+  <span
+    [ngStyle]="{ color: rooms.availableRooms ? 'green' : 'red' }"
+    [innerText]="numberOfRooms"
+  ></span>
   <p>Age of the hotel: <span [innerText]="hotelObject.Age"></span></p>
 </div>
 
 <!-- We render the room list if they are available rooms -->
-<!-- <div *ngIf="rooms.availableRooms > 0">Rooms list:</div> -->
-<!-- other way to write the above sentence -->
-<div *ngIf="rooms?.availableRooms">
+<div *ngIf="rooms.availableRooms > 0">
+  Rooms list:
+  <!-- other way to write the above sentence -->
+  <!-- <div *ngIf="rooms?.availableRooms"> -->
   <!-- We want to display the rooms a s a table -->
   <table>
     <tr>
@@ -26,7 +33,12 @@
       <th>Checkin Time</th>
       <th>Checkout Time</th>
     </tr>
-    <tr *ngFor="let room of roomList; let e = even; let o = odd; let i = index">
+    <!-- With ngClass we change the background color of each line based if the line is even or odd -->
+    <!-- we change the name of the class between even or odd -->
+    <tr
+      [ngClass]="e ? 'even' : 'odd'"
+      *ngFor="let room of roomList; let e = even; let o = odd; let i = index"
+    >
       <td>{{ i + 1 }}</td>
       <td>{{ e ? "Even" : "Odd" }}</td>
       <td>{{ room.roomNumber }}</td>

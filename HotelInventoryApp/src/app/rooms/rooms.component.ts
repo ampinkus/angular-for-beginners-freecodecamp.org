@@ -20,7 +20,7 @@ export class RoomsComponent implements OnInit {
   // we use the object of the interface
   rooms: Room = {
     totalRooms: 20,
-    availableRooms: 10,
+    availableRooms: 20,
     bookedRooms: 5,
   };
 
